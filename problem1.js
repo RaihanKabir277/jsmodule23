@@ -10,6 +10,27 @@ function calculateTax(income, expenses) {
   return tax;
 }
 
+function calculateTax(income, expenses) {
+
+    if(income < 0 || expenses < 0 || expenses > income){
+    
+    return "Invalid Input";
+    
+    }
+    
+    let remainingBalance = 0;
+    
+    let tax = 0;
+    
+    remainingBalance = income - expenses;
+    
+    tax = remainingBalance * 0.20;
+    
+    return tax;
+    
+    }
+
+
 
 function sendNotification(email) {
     if(!email.includes('@')){
